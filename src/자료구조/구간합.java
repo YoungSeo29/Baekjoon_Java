@@ -17,14 +17,14 @@ public class 구간합 {
 
         long[] S = new long[suNo + 1];
 
-        // 구간합 구해놓기
+        // 구간합 구하기
         stringTokenizer = new StringTokenizer(bf.readLine());
         for(int i=1 ; i<=suNo ; i++){
             S[i] = S[i-1] + Integer.parseInt(stringTokenizer.nextToken());
         }
 
         // 질문 갯수만큼 반복
-        for(int q=0 ; q<quizNo ; q++){
+        for(int q=0 ; q < quizNo ; q++){
             stringTokenizer = new StringTokenizer(bf.readLine());
             int i = Integer.parseInt(stringTokenizer.nextToken());
             int j = Integer.parseInt(stringTokenizer.nextToken());
