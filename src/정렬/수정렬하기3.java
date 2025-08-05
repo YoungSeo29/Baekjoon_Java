@@ -46,12 +46,14 @@ public class 수정렬하기3 {
                 bucket[i] += bucket[i-1];
             }
 
+            // 뒤에서부터 정렬
+            // 큐는 FIFO -> 흉내내기 위해서 뒤에서부터 넣어야함.
             for (int i=A.length -1 ; i>=0 ; i--) {
                 output[bucket[(A[i] / jarisu % 10)]-1] = A[i];
                 bucket[(A[i] / jarisu) % 10]--;
             }
 
-            // 뒤에서부터 정렬
+            // 다시 배열로 나열.
             for(int i=0 ; i<A.length ; i++) {
                 // 다음 자리수를 이동하기 위해 현재 자리수 기준 정렬 데이터 저장
                 A[i] = output[i];
