@@ -34,12 +34,13 @@ public class 연결요소의개수 {
             A[e].add(s);
         }
 
+        // DFS 함수 호출 횟수 저장할 변수
         int count = 0;
 
         for( int i=1 ; i< n +1 ; i++) {
-            if(!visited[i]) {
+            if(!visited[i]) {  // 아직 방문하지 않은 정점이라면
                 count ++;
-                DFS(i);
+                DFS(i);  // 새로운 연결 요소의 시작 정점에서만 호출하는 중
             }
         }
 
